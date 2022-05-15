@@ -3,9 +3,10 @@ echo "-----"
 echo 0: Reutn
 echo 1: View Quarantined Files
 echo 2: Clear Quarantined Files
-echo 3: Clear Quarantined Files with Clamscan
-echo 4: Terminate Specific Quarantined File
-echo 5: Restore Quarantined File
+echo 3: Clear Quarantined Files with Clamscan - Use Local Signatures
+echo 4: Clear Quarantined Files with Clamscan - Use System Signatures
+echo 5: Terminate Specific Quarantined File
+echo 6: Restore Quarantined File
 echo
 echo ↓Excute command↓
 read CVAR
@@ -25,10 +26,15 @@ exec sh $PWD/quarantine.sh
 ;;
 [3])
 echo Terminate Quarantined Files...
-clamscan --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
+clamscan --database=$PWD/Sig --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
 exec sh $PWD/quarantine.sh
 ;;
 [4])
+echo Terminate Quarantined Files...
+clamscan --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
+exec sh $PWD/quarantine.sh
+;;
+[5])
 echo "-----"
 echo
 ls -a $HOME/.ClamAV/Quarantine
@@ -48,7 +54,7 @@ case $TERMI in
 esac
 exec sh $PWD/quarantine.sh
 ;;
-[5])
+[6])
 echo "-----"
 echo
 ls -a $HOME/.ClamAV/Quarantine

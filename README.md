@@ -59,113 +59,113 @@ Check Run as terminal.
 
 1.Configure Scan Presets
 
- (1) : Configure Preset
- You can configure scan presets here. For custom options, see the official documentation of ClamAV.
- If you put --remove=yes in your custom options, infected files will be deleted immediately. 
- However, it is not recommended to prevent deletion of important files due to false postives.
- https://docs.clamav.net/manual/Usage/Scanning.html#clamscan
+(1) : Configure Preset
+You can configure scan presets here. For custom options, see the official documentation of ClamAV.
+If you put --remove=yes in your custom options, infected files will be deleted immediately. 
+However, it is not recommended to prevent deletion of important files due to false postives.
+https://docs.clamav.net/manual/Usage/Scanning.html#clamscan
  
- (2) : View Preset
- You can check the configured presets.
+(2) : View Preset
+You can check the configured presets.
  
 2.Scan Home Folder
 
- When a preset is selected, clamscan scans user's home folder according to the options specified in the preset.
+When a preset is selected, clamscan scans user's home folder according to the options specified in the preset.
 
 3.Custom Scan
 
- Select a preset and enter the path you want to scan, and clamscan will scan the path according to the options specified in the preset.
+Select a preset and enter the path you want to scan, and clamscan will scan the path according to the options specified in the preset.
 
 4.Scheduled Scan
 
- (1) Create Scan Script
- Create scan scripts based on configured presets.
- You can select options such as GUI notifications.
+(1) Create Scan Script
+Create scan scripts based on configured presets.
+You can select options such as GUI notifications.
  
- (2) View Scan Scripts
- You can see the generated scan scripts.
+(2) View Scan Scripts
+You can see the generated scan scripts.
  
- (3) Generate Cron Schedule
- Create a daily schedule for crontab. Just type crontab -e command and insert the created schedule. 
- After that, the script is executed according to the set schedule.
+(3) Generate Cron Schedule
+Create a daily schedule for crontab. Just type crontab -e command and insert the created schedule. 
+After that, the script is executed according to the set schedule.
  
- (4) Clear Scan Scripts
- Delete all scripts.
+(4) Clear Scan Scripts
+Delete all scripts.
  
- (5) Remove Specific Scan Script
- You can delete one script you want.
+(5) Remove Specific Scan Script
+You can delete one script you want.
  
- (6) Set Automatic Scheduler
- Generate automatic script that execute determined scripts every hour.
- When the configuration is complete, type the command crontab -e and put timebot.sh.
+(6) Set Automatic Scheduler
+Generate automatic script that execute determined scripts every hour.
+When the configuration is complete, type the command crontab -e and put timebot.sh.
  
- (7) View Automatic Scheduler
- You can see the timebot.sh created by the above function.
+(7) View Automatic Scheduler
+You can see the timebot.sh created by the above function.
 
 5.Log Viewer
 
- (1) View Logs
- You can check the logs.
+(1) View Logs
+You can check the logs.
  
- (2) Clear Logs
- Delete all logs.
+(2) Clear Logs
+Delete all logs.
  
- (3) Remove Specific Logs
- You can delete one log you want.
+(3) Remove Specific Logs
+You can delete one log you want.
 
 6.Quarantine
 
- (1) View Quarantined Files
- You can check the quarantined files.
+(1) View Quarantined Files
+You can check the quarantined files.
  
- (2) Clear Quarantined Files
- Delete all quarantined files.
+(2) Clear Quarantined Files
+Delete all quarantined files.
  
- (3) Clear Quarantined Files with Clamscan
- Delete all quarantined files with clamscan option '--remove=yes'.
+(3) Clear Quarantined Files with Clamscan
+Delete all quarantined files with clamscan option '--remove=yes'.
  
- (4) Terminate Specific Quarantined File
- You can delete one quarantined file you want.
+(4) Terminate Specific Quarantined File
+You can delete one quarantined file you want.
   
- (5) Restore Quarantined File
- You can restore one quarantined file you want.
+(5) Restore Quarantined File
+You can restore one quarantined file you want.
  
 7. Update Local Signatures
  
- (1) Update Signatures
- Update local signatures.
+(1) Update Signatures
+Update local signatures.
  
- (2) Generate Cron Schedule
- Create a daily schedule for crontab. Just type crontab -e command and insert the created schedule. 
- After that, the script is executed according to the set schedule.
+(2) Generate Cron Schedule
+Create a daily schedule for crontab. Just type crontab -e command and insert the created schedule. 
+After that, the script is executed according to the set schedule.
  
- (3) Create Script for Automatic Scheduler
- Create an executable script for timebot.sh.
+(3) Create Script for Automatic Scheduler
+Create an executable script for timebot.sh.
  
- (4) Create Local Update Config
- Create a basic configuration file.
+(4) Create Local Update Config
+Create a basic configuration file.
   
- (5) Copy System Update Config
- Copy the system configuration file.
- (/etc/freshclam.conf)
+(5) Copy System Update Config
+Copy the system configuration file.
+(/etc/freshclam.conf)
  
- (6)Edit the configuration file using Nano.
- See the official ClamAV documentation.
- https://docs.clamav.net/manual/Usage/Configuration.html#freshclamconf
+(6)Edit the configuration file using Nano.
+See the official ClamAV documentation.
+https://docs.clamav.net/manual/Usage/Configuration.html#freshclamconf
  
 8. Update System Signatures
 
- (1/2)Enable/Disable Auto Update
- You can configure the signatures in /var/lib/clamav to be updated automatically.
- It's simpler and easier way than auto-updating local signatures using crontab, but runs with higher permission.
- Consider your threat model when deciding how to update.
+(1/2)Enable/Disable Auto Update
+You can configure the signatures in /var/lib/clamav to be updated automatically.
+It's simpler and easier way than auto-updating local signatures using crontab, but runs with higher permission.
+Consider your threat model when deciding how to update.
  
- (3)Update Signatures.
- Update signatures in /var/lib/clamav.
+(3)Update Signatures.
+Update signatures in /var/lib/clamav.
 
 9.Install Essential Packages
 
- Find and install ClamAV and Crontab from the packages.(Fedora only)
+Find and install ClamAV and Crontab from the packages.(Fedora only)
 
 
 -Clamd is not supported

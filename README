@@ -121,13 +121,13 @@ Check Run as terminal.
  (2) Clear Quarantined Files
  Delete all quarantined files.
  
- (3) Clear Quarantined Files with Clamscan
+ (3/4) Clear Quarantined Files with Clamscan
  Delete all quarantined files with clamscan option '--remove=yes'.
  
- (4) Terminate Specific Quarantined File
+ (5) Terminate Specific Quarantined File
  You can delete one quarantined file you want.
   
- (5) Restore Quarantined File
+ (6) Restore Quarantined File
  You can restore one quarantined file you want.
  
 7. Update Local Signatures

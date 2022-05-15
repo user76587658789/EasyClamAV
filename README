@@ -2,7 +2,7 @@ EasyClamAV
 
 An easy-to-use scripts for ClamAV.
 EasyClamAV can scan easily based on scan presets.
-It was basically tested on a Fedora workstation(which distro I use), 
+It was basically tested on a Fedora Workstation(which distro I use), 
 but it will probably work with other distros with some modifications.
 
 I'm just an end-users who are interested in security and privacy, not a professional programmer.

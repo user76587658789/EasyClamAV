@@ -129,7 +129,7 @@ You can delete one quarantined file you want.
   
 (5) Restore Quarantined File
 You can restore one quarantined file you want.
- 
+
 7. Update Local Signatures
  
 (1) Update Signatures

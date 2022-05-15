@@ -1,0 +1,8 @@
+#!/bin/bash
+cat << EOT > $PWD/Start.sh
+#!/bin/bash
+cd $PWD
+exec sh $PWD/EasyClamAV
+EOT
+chmod +x $PWD/Start.sh
+chmod +x $PWD/EasyClamAV

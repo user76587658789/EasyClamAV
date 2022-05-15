@@ -1,0 +1,1 @@
+--max-filesize=25M --max-scansize=25M --infected --recursive  --detect-pua=yes   

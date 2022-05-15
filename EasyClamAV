@@ -1,0 +1,24 @@
+#!/bin/bash
+mkdir $HOME/.ClamAV 2>/dev/null
+mkdir $HOME/.ClamAV/Logs 2>/dev/null
+mkdir $HOME/.ClamAV/Quarantine 2>/dev/null
+mkdir $PWD/Presets 2>/dev/null
+mkdir $PWD/Schedule 2>/dev/null
+mkdir $PWD/Sig 2>/dev/null
+chmod +x $PWD/main.sh
+chmod +x $PWD/scanconf.sh
+chmod +x $PWD/customscan.sh
+chmod +x $PWD/homescan.sh
+chmod +x $PWD/install-essential-packages.sh
+chmod +x $PWD/logviewer.sh
+chmod +x $PWD/presets.sh
+chmod +x $PWD/quarantine.sh
+chmod +x $PWD/schedule.sh
+chmod +x $PWD/updater.sh
+chmod +x $PWD/updater-advanced.sh
+chmod +x $PWD/genscripts.sh
+chmod +x $PWD/timebot.sh
+echo
+echo EasyClamAV
+echo
+exec sh main.sh

@@ -29,10 +29,10 @@ case "$RUREAD" in
         RU=""
         ;;
 esac
-echo "↓Set limit of file size(MB, <4000, Recommended=25)↓"
+echo "↓Set limit of file size(MB, <4000, Recommended=100)↓"
 read FSIZE
 FSIZER=$FSIZE"M"
-echo "↓Set limit of scan size(MB, <4000, Recommended=25)↓"
+echo "↓Set limit of scan size(MB, <4000, Recommended=400)↓"
 read SSIZE
 SSIZER=$SSIZE"M"
 echo "↓Show only infected files(*Yes/No)↓"

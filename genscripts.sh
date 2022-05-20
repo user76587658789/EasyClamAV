@@ -35,7 +35,7 @@ case "$NREAD" in
 [yY][eE][sS]|[yY]) 
 cat << EOT > $PWD/Schedule/$SNAME.sh
 #!/bin/bash
-notify-send $SNAME "ClamAV is scanning..." && SVAR=$DATEP;/usr/bin/clamscan -l $HOME/.ClamAV/Logs/$SNAME-$SVARP $SETP $SCANDIR 2>/dev/null;DVAR=$TAILP;notify-send "Scan Completed, Infected Files:"$DVARP
+notify-send $SNAME "ClamAV is scanning..." && SVAR=$DATEP;/usr/bin/clamscan -l $HOME/.ClamAV/Logs/$SNAME-$SVARP $SETP $SCANDIR 2>/dev/null;DVAR=$TAILP;notify-send "Completed, Infected Files:"$DVARP
 EOT
 ;;
 *)

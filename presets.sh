@@ -55,7 +55,7 @@ case "$QREAD" in
         QR=""
         ;;
 esac
-echo "↓Check PUA?(*Yes/No)↓"
+echo "↓Check PUA?(Yes/*No)↓"
 read PREAD
 case "$PREAD" in
     [yY][eE][sS]|[yY]) 

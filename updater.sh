@@ -7,6 +7,7 @@ echo 3: Create Script for Automatic Scheduler
 echo 4: Create Local Update Config 
 echo 5: Copy System Update Config - Need SU Permission
 echo 6: Edit Local Update Config with Nano
+echo 7: Check Local Signatures Version
 echo
 echo ↓Excute command↓
 read CVAR
@@ -65,6 +66,10 @@ exec sh $PWD/updater.sh
 ;;
 [6])
 nano $PWD/localupdate.conf
+exec sh $PWD/updater.sh
+;;
+[7])
+freshclam --version --user=$(whoami) --datadir=$PWD/Sig --config-file=$PWD/localupdate.conf
 exec sh $PWD/updater.sh
 ;;
 *)

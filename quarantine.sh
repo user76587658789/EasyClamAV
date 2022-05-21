@@ -32,7 +32,7 @@ FSIZER=$FSIZE"M"
 echo "↓Set limit of scan size(MB, <4000, Recommended=400)↓"
 read SSIZE
 SSIZER=$SSIZE"M"
-echo "↓Check PUA?(*Yes/No)↓"
+echo "↓Check PUA?(Yes/*No)↓"
 read PREAD
 case "$PREAD" in
     [yY][eE][sS]|[yY]) 
@@ -54,7 +54,7 @@ FSIZER=$FSIZE"M"
 echo "↓Set limit of scan size(MB, <4000, Recommended=400)↓"
 read SSIZE
 SSIZER=$SSIZE"M"
-echo "↓Check PUA?(*Yes/No)↓"
+echo "↓Check PUA?(Yes/*No)↓"
 read PREAD
 case "$PREAD" in
     [yY][eE][sS]|[yY]) 

@@ -25,13 +25,47 @@ rm -rf $HOME/.ClamAV/Quarantine/*
 exec sh $PWD/quarantine.sh
 ;;
 [3])
+echo "-----"
+echo "↓Set limit of file size(MB, <4000, Recommended=100)↓"
+read FSIZE
+FSIZER=$FSIZE"M"
+echo "↓Set limit of scan size(MB, <4000, Recommended=400)↓"
+read SSIZE
+SSIZER=$SSIZE"M"
+echo "↓Check PUA?(*Yes/No)↓"
+read PREAD
+case "$PREAD" in
+    [yY][eE][sS]|[yY]) 
+        PUA="--detect-pua=yes"
+        ;;
+    *)
+        PUA="--detect-pua=no"
+        ;;
+esac
 echo Terminate Quarantined Files...
-clamscan --database=$PWD/Sig --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
+clamscan --database=$PWD/Sig --max-filesize=$FSIZER --max-scansize=$SSIZER $PUA --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
 exec sh $PWD/quarantine.sh
 ;;
 [4])
+echo "-----"
+echo "↓Set limit of file size(MB, <4000, Recommended=100)↓"
+read FSIZE
+FSIZER=$FSIZE"M"
+echo "↓Set limit of scan size(MB, <4000, Recommended=400)↓"
+read SSIZE
+SSIZER=$SSIZE"M"
+echo "↓Check PUA?(*Yes/No)↓"
+read PREAD
+case "$PREAD" in
+    [yY][eE][sS]|[yY]) 
+        PUA="--detect-pua=yes"
+        ;;
+    *)
+        PUA="--detect-pua=no"
+        ;;
+esac
 echo Terminate Quarantined Files...
-clamscan --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
+clamscan --max-filesize=$FSIZER --max-scansize=$SSIZER $PUA --quiet --recursive --remove=yes $HOME/.ClamAV/Quarantine/
 exec sh $PWD/quarantine.sh
 ;;
 [5])

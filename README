@@ -165,7 +165,7 @@ Check Run as terminal.
 
 9.Install Essential Packages
 
- Find and install ClamAV and Crontab from the packages.(Fedora only)
+ Find and install ClamAV and Crontab from the packages.
 
 
 -Clamd is not supported

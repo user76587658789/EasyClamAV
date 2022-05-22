@@ -9,7 +9,7 @@ echo 5: Log Viewer
 echo 6: Quarantine
 echo 7: Update Local Signatures - Recommended
 echo 8: Update System Signatures - Need SU Permission
-echo 9: Install Essential Packages - Need SU Permission - Fedora/RHEL only
+echo 9: Install Essential Packages
 echo
 echo ↓Excute command↓
 read CVAR
@@ -47,4 +47,3 @@ echo Bye.
 exit
 ;;
 esac
-
